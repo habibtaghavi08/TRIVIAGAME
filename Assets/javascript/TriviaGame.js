@@ -16,7 +16,10 @@ var correctAnswerCount = 0
 var incorrectAnswerCount = 0
 var unAnsweredCount = 0
 var indexQuestion = 0
-var setIntervalId = 0
+var setIntervalId;
+
+
+var counter=30
 
 
 
@@ -38,14 +41,13 @@ var setIntervalId = 0
 function displayQuestions() {
   for (let index = 0; index < questions.length; index++) {
 
-    var p = $("<p>")
+    var p = $("<p class='mt-2'>")
     var question = questions[index].question
     p.html(question)
-
     var radioDiv = $("<div>")
     for (let indexChoice = 0; indexChoice < questions[index].choices.length; indexChoice++) {
       var div = $("<div class='form-check form-check-inline'>")
-      var input = $("<input class='form-check-input' type='radio' name='inlineRadioOptions'>")
+      var input = $("<input class='form-check-input  ' type='radio' name='inlineRadioOptions'>")
       input.attr("id", "inlineRadio" + index)
 
       //this grabs the choices from the array and makes radio button for it
@@ -64,8 +66,19 @@ function displayQuestions() {
     
     $("#trivia").append(p,radioDiv)
 
+    setIntervalId=setInterval(countDown,1000)
+
   }
 }
 
 
 displayQuestions()
+
+
+
+
+function countDown(){
+
+  $("#timer").html(counter)
+  counter--
+}
