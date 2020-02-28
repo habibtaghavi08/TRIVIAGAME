@@ -8,12 +8,28 @@
      <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="Assets/style.css/">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+
 
 </head>
 <body>
 
-    <div class="container">
-         <div class="row">
+    <div class="w3-container">
+
+
+    <button class="w3-button w3-black" id="startButton">PRESS TO START GAME</button>
+   </div>
+    
+<div class="w3-row w3-large">
+   <div class="w3-cell-middle w3-container w3-black w3-cell">
+   <h2 >ANSWER AS MANY QUESTIONS IN ALLOTED AMOUNT OF TIME</h2>
+ 
+
+   
+       
+         <div class="row" id="start">
 
             <div class="col-sm-11">
 
@@ -24,7 +40,12 @@
                <div id="timer"></div>
             </div>
          </div>
-
+          
+         <div class="row">
+            <div class="col-sm-12">
+              <div id="scoreBoard"></div>
+            </div>
+         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="./Assets/javascript/TriviaGame.js"></script>

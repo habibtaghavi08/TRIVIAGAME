@@ -10,6 +10,13 @@ var questions = [
     answer: "warp & weft"
 
   }
+,
+{
+  question: "What is the foundtion of a Persian Rug callded?",
+  choices: ["warp", "weft", "warp & weft", "wool"],
+  answer: "warp & weft"
+
+}
 ]
 //index below is for the array of questions being asked
 var correctAnswerCount = 0
@@ -47,15 +54,16 @@ function displayQuestions() {
     var radioDiv = $("<div>")
     for (let indexChoice = 0; indexChoice < questions[index].choices.length; indexChoice++) {
       var div = $("<div class='form-check form-check-inline'>")
-      var input = $("<input class='form-check-input  ' type='radio' name='inlineRadioOptions'>")
+      var input = $("<input class='form-check-input  ' type='radio' name='inlineRadioOption"+index+"'>")
       input.attr("id", "inlineRadio" + index)
+     input.attr("data-correctAnswer",questions[index].answer ) 
 
       //this grabs the choices from the array and makes radio button for it
       var choice = questions[index].choices[indexChoice]
       input.attr("value", choice)
       var answer = questions[index].answer
       // this so each possible choices will the correct answer
-      input.attr("data-answer", answer)
+      // input.attr("data-answer", answer)
       var label = $("<label class='form-check-label' for='inlineRadio2'>")
       label.html(choice)
 
@@ -63,16 +71,27 @@ function displayQuestions() {
 
       radioDiv.append(div)
     }
+    $(".form-check-input").on("click", function(){
+        var dataCorrectAnswer=$(this).attr("data-correctAnswer")
+        var userChoiceAnswer=$(this).val()
+        if(userChoiceAnswer===dataCorrectAnswer){
+           correctAnswerCount++
+          
+        }else{
+          incorrectAnswerCount++
+        }
+    })
     
     $("#trivia").append(p,radioDiv)
 
-    setIntervalId=setInterval(countDown,1000)
+ 
 
   }
+  setIntervalId=setInterval(countDown,1000)
 }
 
 
-displayQuestions()
+
 
 
 
@@ -80,5 +99,34 @@ displayQuestions()
 function countDown(){
 
   $("#timer").html(counter)
+  if(counter===0){
+    clearInterval(setIntervalId)
+    $("#scoreBoard").show()
+    $("#start").hide()
+
+  var p=$("<p>") 
+ 
+  p.append("CORRECT ANSWER:" + correctAnswerCount + "<br>")
+  p.append("INCORRECT ANSWER:" + incorrectAnswerCount + "<br>")
+
+// total answers that have not been answered eqauls the amount of answered correct plus toal amount od answered incorrect = your answeer
+  var totalUnanswered=questions.length - (correctAnswerCount + incorrectAnswerCount)
+
+p.append("UNANSWERED QUESTIONS:"+ totalUnanswered + "<br>")
+
+$("#scoreBoard").append(p)
+
+  }
   counter--
 }
+$("#start").hide()
+
+
+$("#startButton").on("click",function(){
+      
+  displayQuestions()
+  $("#start").show()
+  $("#startButton").hide()
+  $("#scoreBoard").hide()
+
+})
