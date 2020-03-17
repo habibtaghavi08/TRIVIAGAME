@@ -1,23 +1,39 @@
 var questions = [
   {
-    question: "What is the most common material in Persian Rug?",
+    question: "#1 What is the most common material in Persian Rug?",
     choices: ["wool", "cotton", "silk", "wool & cotton"],
     answer: "wool & cotton"
   },
   {
-    question: "What is the foundtion of a Persian Rug callded?",
+    question: "#2 What is the foundtion of a Persian Rug callded?",
     choices: ["warp", "weft", "warp & weft", "wool"],
     answer: "warp & weft"
+  },
 
-  }
-,
-{
-  question: "What is the foundtion of a Persian Rug callded?",
-  choices: ["warp", "weft", "warp & weft", "wool"],
-  answer: "warp & weft"
-
-}
+  {
+    question: "#3 D0 all Persian Rugs increase in value over time?",
+    choices: ["yes", "no", "yes, depends on the rug & condtion", "All of the above"],
+    answer: "yes, depends on the rug & condtion"
+  },
+  {
+    question: "#4 Are all Persain Rugs made with Vegatable Dye?",
+    choices: ["yes", "no", "depends on the origin of Persian Rug", "All of the above"],
+    anseer: "depends of the origin of the Persian Rug"
+  },
+  {
+    question: "#5 How are Persian Rugs Named?",
+    choices: ["by the weaver", "by the Master", "by the city in which it was woven", "by the Master Weaver"],
+    answer: "by the city in which it was woven,"
+  },
+  {
+    question: "#6 What factors determine the pricing of a Persain Rug?",
+    choices: [ "condtion, age & origin", "age & colors", "colors & condtion", "All of the above"],
+    answer: "All of the above"
+  },
 ]
+
+
+
 //index below is for the array of questions being asked
 var correctAnswerCount = 0
 var incorrectAnswerCount = 0
@@ -54,7 +70,7 @@ function displayQuestions() {
     var radioDiv = $("<div>")
     for (let indexChoice = 0; indexChoice < questions[index].choices.length; indexChoice++) {
       var div = $("<div class='form-check form-check-inline'>")
-      var input = $("<input class='form-check-input  ' type='radio' name='inlineRadioOption"+index+"'>")
+      var input = $("<input class='form-check-input  ' type='radio' name='inlineRadioOption" +index+"'>")
       input.attr("id", "inlineRadio" + index)
      input.attr("data-correctAnswer",questions[index].answer ) 
 
