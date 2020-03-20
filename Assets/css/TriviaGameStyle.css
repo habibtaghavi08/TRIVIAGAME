@@ -21,26 +21,31 @@ body{
 
    .col-sm-11{
     background-image: url(../images/Dad&HabibRugRepairPic.jpg);
-    opacity:0.8;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
-    color: red;
+    color:seagreen;
     font-family: 'Times New Roman', Times, serif;
     font-size: large;
     font-weight: 900;
-    border:seagreen 5px;
-    border-style: solid;
+    border:red 9px;
+    border-style: ridge;
     
     }  
 
-h2{
+/* h2{
+    text-align: center;
+    color: red;
+    background: seagreen; opacity: 0.9;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+} */
+   
+.jumbotron{
     text-align: center;
     color: red;
     background: seagreen; opacity: 0.9;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bolder;
 }
-   
-   
