@@ -1,5 +1,4 @@
-var questions = [
-  {
+var questions = [{
     question: "#1 What is the most common material in Persian Rug?",
     choices: ["wool", "cotton", "silk", "wool & cotton"],
     answer: "wool & cotton"
@@ -17,19 +16,19 @@ var questions = [
   },
   {
     question: "#4 Are all Persain Rugs made with Vegatable Dye?",
-    choices: ["yes", "no", "depends on the origin of Persian Rug", "All of the above"],
-    anseer: "depends of the origin of the Persian Rug"
+    choices: ["yes", "no", "depends on the origin of the Persian Rug", "All of the above"],
+    answer: "depends on the origin of the Persian Rug"
   },
   {
     question: "#5 How are Persian Rugs Named?",
     choices: ["by the weaver", "by the Master", "by the city in which it was woven", "by the Master Weaver"],
-    answer: "by the city in which it was woven,"
+    answer: "by the city in which it was woven"
   },
   {
     question: "#6 What factors determine the pricing of a Persain Rug?",
-    choices: [ "condtion, age & origin", "age & colors", "colors & condtion", "All of the above"],
+    choices: ["condtion, age & origin", "age & colors", "colors & condtion", "All of the above"],
     answer: "All of the above"
-  },
+  }
 ]
 
 
@@ -42,23 +41,25 @@ var indexQuestion = 0
 var setIntervalId;
 
 
-var counter=30
+var counter = 30
 
 
 
 
-{/* <div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-  <label class="form-check-label" for="inlineRadio1">1</label>
-</div>
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-  <label class="form-check-label" for="inlineRadio2">2</label>
-</div>
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
-  <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
-</div> */}
+{
+  /* <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+    <label class="form-check-label" for="inlineRadio1">1</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+    <label class="form-check-label" for="inlineRadio2">2</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
+    <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
+  </div> */
+}
 
 //create function to display questions
 function displayQuestions() {
@@ -70,9 +71,9 @@ function displayQuestions() {
     var radioDiv = $("<div>")
     for (let indexChoice = 0; indexChoice < questions[index].choices.length; indexChoice++) {
       var div = $("<div class='form-check form-check-inline'>")
-      var input = $("<input class='form-check-input  ' type='radio' name='inlineRadioOption" +index+"'>")
+      var input = $("<input class='form-check-input' type='radio' name='inlineRadioOption" + index + "'>")
       input.attr("id", "inlineRadio" + index)
-     input.attr("data-correctAnswer",questions[index].answer ) 
+      input.attr("data-correctAnswer", questions[index].answer)
 
       //this grabs the choices from the array and makes radio button for it
       var choice = questions[index].choices[indexChoice]
@@ -87,23 +88,31 @@ function displayQuestions() {
 
       radioDiv.append(div)
     }
-    $(".form-check-input").on("click", function(){
-        var dataCorrectAnswer=$(this).attr("data-correctAnswer")
-        var userChoiceAnswer=$(this).val()
-        if(userChoiceAnswer===dataCorrectAnswer){
-           correctAnswerCount++
-          
-        }else{
-          incorrectAnswerCount++
-        }
-    })
-    
-    $("#trivia").append(p,radioDiv)
 
- 
+
+    $("#trivia").append(p, radioDiv)
+
+
 
   }
-  setIntervalId=setInterval(countDown,1000)
+
+
+  $(".form-check-input").on("click", function () {
+
+    var dataCorrectAnswer = $(this).attr("data-correctAnswer")
+    var userChoiceAnswer = $(this).attr("value")
+
+    console.log(dataCorrectAnswer, userChoiceAnswer)
+    if (userChoiceAnswer === dataCorrectAnswer) {
+      correctAnswerCount++
+
+    } else {
+      incorrectAnswerCount++
+    }
+
+    console.log(correctAnswerCount, incorrectAnswerCount)
+  })
+  setIntervalId = setInterval(countDown, 1000)
 }
 
 
@@ -112,25 +121,25 @@ function displayQuestions() {
 
 
 
-function countDown(){
+function countDown() {
 
   $("#timer").html(counter)
-  if(counter===0){
+  if (counter === 0) {
     clearInterval(setIntervalId)
     $("#scoreBoard").show()
     $("#start").hide()
 
-  var p=$("<p>") 
- 
-  p.append("CORRECT ANSWER:" + correctAnswerCount + "<br>")
-  p.append("INCORRECT ANSWER:" + incorrectAnswerCount + "<br>")
+    var p = $("<p>")
 
-// total answers that have not been answered eqauls the amount of answered correct plus toal amount od answered incorrect = your answeer
-  var totalUnanswered=questions.length - (correctAnswerCount + incorrectAnswerCount)
+    p.append("CORRECT ANSWER:" + correctAnswerCount + "<br>")
+    p.append("INCORRECT ANSWER:" + incorrectAnswerCount + "<br>")
 
-p.append("UNANSWERED QUESTIONS:"+ totalUnanswered + "<br>")
+    // total answers that have not been answered eqauls the amount of answered correct plus toal amount od answered incorrect = your answeer
+    var totalUnanswered = questions.length - (correctAnswerCount + incorrectAnswerCount);
 
-$("#scoreBoard").append(p)
+    p.append("UNANSWERED QUESTIONS:" + totalUnanswered + "<br>")
+
+    $("#scoreBoard").append(p)
 
   }
   counter--
@@ -138,9 +147,10 @@ $("#scoreBoard").append(p)
 $("#start").hide()
 
 
-$("#startButton").on("click",function(){
-      
+$("#startButton").on("click", function () {
+
   displayQuestions()
+
   $("#start").show()
   $("#startButton").hide()
   $("#scoreBoard").hide()
