@@ -1,0 +1,23 @@
+body{
+    /* background-image:url(../images/rugs10Bazzar.jpg); */
+    background-image: url(../images/rugPic.11.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+   background-size: cover;
+   height: 100vh;
+   font-weight: 600;
+   
+   
+   }
+   
+
+   
+   #timer{
+       color: red;
+       background-color: sandybrown;
+       border-color: red 10px;
+       border-width: thick;
+       border-style: solid;
+       font-size: xx-large;
+   
+   
