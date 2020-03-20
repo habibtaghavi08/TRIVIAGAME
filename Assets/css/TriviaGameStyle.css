@@ -26,11 +26,11 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
-    color: rgb(205, 195, 50);
+    color: red;
     font-family: 'Times New Roman', Times, serif;
     font-size: large;
     font-weight: 900;
-    border: springgreen 10px;
+    border: red 5px;
     border-style: solid;
     
     }  

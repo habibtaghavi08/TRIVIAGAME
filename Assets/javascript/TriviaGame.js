@@ -16,13 +16,13 @@ var questions = [{
   },
   {
     question: "#4 Are all Persain Rugs made with Vegatable Dye?",
-    choices: ["yes", "no", "depends on the origin of the Persian Rug", "All of the above"],
-    answer: "depends on the origin of the Persian Rug"
+    choices: ["yes", "no", "depends on origin of the Rug", "All of the above"],
+    answer:  "depends on origin of the Rug"
   },
   {
     question: "#5 How are Persian Rugs Named?",
-    choices: ["by the weaver", "by the Master", "by the city in which it was woven", "by the Master Weaver"],
-    answer: "by the city in which it was woven"
+    choices: ["by the weaver", "by the Master", "city it was woven in", "by the Master Weaver"],
+    answer: "city it was woven in"
   },
   {
     question: "#6 What factors determine the pricing of a Persain Rug?",
