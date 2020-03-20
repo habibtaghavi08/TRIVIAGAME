@@ -12,7 +12,7 @@ body{
    
    #timer{
        color: red;
-       background-color: sandybrown;
+       background-color: seagreen;
        border-color: red 10px;
        border-width: thick;
        border-style: solid;
@@ -21,7 +21,7 @@ body{
 
    .col-sm-11{
     background-image: url(../images/Dad&HabibRugRepairPic.jpg);
-    opacity:1;
+    opacity:0.8;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -30,9 +30,17 @@ body{
     font-family: 'Times New Roman', Times, serif;
     font-size: large;
     font-weight: 900;
-    border: red 5px;
+    border:seagreen 5px;
     border-style: solid;
     
     }  
+
+h2{
+    text-align: center;
+    color: red;
+    background: seagreen; opacity: 0.9;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
    
    
