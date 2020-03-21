@@ -1,38 +1,42 @@
-body{
+body {
     /* background-image:url(../images/rugs10Bazzar.jpg); */
-    background-image: url(../images/rugPic.11.jpg);
+    background-image: url(../images/rugs10Bazzar.jpg);
     background-repeat: no-repeat;
     background-position: center;
-   background-size: cover;
-   height: 100vh;
-   font-weight: 600;
-   }
-   
+    background-size: cover;
+    height: 100vh;
+    font-weight: 600;
+    background-position-y: 100px;
+}
 
-   
-   #timer{
-       color: red;
-       background-color: seagreen;
-       border-color: red 10px;
-       border-width: thick;
-       border-style: solid;
-       font-size: xx-large;
-   }
 
-   .col-sm-11{
+
+#timer {
+    color: red;
+    background-color: burlywood;
+    border-color: red;
+     border-width: thick;
+    border-style: solid;
+    font-size: xx-large;
+
+}
+
+.col-sm-11 {
     background-image: url(../images/Dad&HabibRugRepairPic.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
-    color:seagreen;
+    color:rgb(1, 237, 241) ;
     font-family: 'Times New Roman', Times, serif;
-    font-size: large;
+    font-size: x-large;
+    text-decoration-line: underline;
     font-weight: 900;
-    border:red 9px;
+    border:red;
     border-style: ridge;
-    
-    }  
+    border-width: 10px;
+
+}
 
 /* h2{
     text-align: center;
@@ -41,11 +45,24 @@ body{
     font-family: 'Times New Roman', Times, serif;
     font-weight: bolder;
 } */
-   
-.jumbotron{
+
+.jumbotron {
     text-align: center;
     color: red;
-    background: seagreen; opacity: 0.9;
+    background: springgreen;
+    opacity: 0.9;
     font-family: 'Times New Roman', Times, serif;
-    font-weight: bolder;
+    font-weight: 1200;
+    font-style: italic;
 }
+ 
+#scoreBoard {
+    text-align: center;
+    color: springgreen;
+    border: 7px;
+    border-color: red;
+    border-style: ridge;
+    font-weight: bolder;
+    font-size: xx-large;
+    background: transparent;
+} 
