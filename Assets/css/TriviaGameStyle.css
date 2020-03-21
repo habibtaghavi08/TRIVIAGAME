@@ -1,12 +1,11 @@
 body {
-    /* background-image:url(../images/rugs10Bazzar.jpg); */
-    background-image: url(../images/rugs10Bazzar.jpg);
+    background-image:url(../images/rugs10Bazzar.jpg); 
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     height: 100vh;
     font-weight: 600;
-    background-position-y: 100px;
+    background-position-y: 50px;
 }
 
 
@@ -15,7 +14,7 @@ body {
     color: red;
     background-color: burlywood;
     border-color: red;
-     border-width: thick;
+    border-width: thick;
     border-style: solid;
     font-size: xx-large;
 
@@ -27,24 +26,17 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
-    color:rgb(1, 237, 241) ;
+    color: rgb(1, 237, 241);
     font-family: 'Times New Roman', Times, serif;
     font-size: x-large;
     text-decoration-line: underline;
     font-weight: 900;
-    border:red;
+    border: red;
     border-style: ridge;
     border-width: 10px;
 
 }
 
-/* h2{
-    text-align: center;
-    color: red;
-    background: seagreen; opacity: 0.9;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bolder;
-} */
 
 .jumbotron {
     text-align: center;
@@ -55,7 +47,7 @@ body {
     font-weight: 1200;
     font-style: italic;
 }
- 
+
 #scoreBoard {
     text-align: center;
     color: springgreen;
@@ -65,4 +57,4 @@ body {
     font-weight: bolder;
     font-size: xx-large;
     background: transparent;
-} 
+}

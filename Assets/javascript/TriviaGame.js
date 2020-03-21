@@ -17,7 +17,7 @@ var questions = [{
   {
     question: "#4 Are all Persain Rugs made with Vegatable Dye?",
     choices: ["yes", "no", "depends on origin of the Rug", "All of the above"],
-    answer:  "depends on origin of the Rug"
+    answer: "depends on origin of the Rug"
   },
   {
     question: "#5 How are Persian Rugs Named?",
@@ -40,26 +40,8 @@ var unAnsweredCount = 0
 var indexQuestion = 0
 var setIntervalId;
 
-
 var counter = 30
 
-
-
-
-{
-  /* <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-    <label class="form-check-label" for="inlineRadio1">1</label>
-  </div>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-    <label class="form-check-label" for="inlineRadio2">2</label>
-  </div>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
-    <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
-  </div> */
-}
 
 //create function to display questions
 function displayQuestions() {
@@ -115,12 +97,6 @@ function displayQuestions() {
   setIntervalId = setInterval(countDown, 1000)
 }
 
-
-
-
-
-
-
 function countDown() {
 
   $("#timer").html(counter)
@@ -134,7 +110,8 @@ function countDown() {
     p.append("CORRECT ANSWER:" + correctAnswerCount + "<br>")
     p.append("INCORRECT ANSWER:" + incorrectAnswerCount + "<br>")
 
-    // total answers that have not been answered eqauls the amount of answered correct plus toal amount od answered incorrect = your answeer
+    // total answers that have not been answered eqauls the amount of answered correct plus 
+    // toal amount od answered incorrect = the answeer
     var totalUnanswered = questions.length - (correctAnswerCount + incorrectAnswerCount);
 
     p.append("UNANSWERED QUESTIONS:" + totalUnanswered + "<br>")
