@@ -1,11 +1,11 @@
 body {
-    background-image:url(../images/rugs10Bazzar.jpg); 
+    background-image:url(../images/wideShotOfShowRoomTaghavi.jpg); 
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     height: 100vh;
     font-weight: 600;
-    background-position-y: 50px;
+    background-position-y: -50px;
 }
 
 
@@ -26,7 +26,8 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
-    color: rgb(1, 237, 241);
+    /* color: rgb(1, 237, 241); */
+    color:AliceBlue ;
     font-family: 'Times New Roman', Times, serif;
     font-size: x-large;
     text-decoration-line: underline;
@@ -42,19 +43,21 @@ body {
     text-align: center;
     color: red;
     background: springgreen;
-    opacity: 0.9;
+    opacity: 0.7;
     font-family: 'Times New Roman', Times, serif;
     font-weight: 1200;
     font-style: italic;
+    
 }
 
 #scoreBoard {
     text-align: center;
-    color: springgreen;
+    color: red;
     border: 7px;
     border-color: red;
     border-style: ridge;
     font-weight: bolder;
-    font-size: xx-large;
-    background: transparent;
+    font-size: x-large;
+    background:burlywood;
+    opacity: 0.8;
 }

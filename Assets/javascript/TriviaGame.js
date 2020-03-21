@@ -10,7 +10,7 @@ var questions = [{
   },
 
   {
-    question: "#3 D0 all Persian Rugs increase in value over time?",
+    question: "#3 Do all Persian Rugs increase in value over time?",
     choices: ["yes", "no", "yes, depends on the rug & condtion", "All of the above"],
     answer: "yes, depends on the rug & condtion"
   },
