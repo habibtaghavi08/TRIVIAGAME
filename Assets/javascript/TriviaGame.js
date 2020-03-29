@@ -20,7 +20,7 @@ var questions = [{
     answer: "depends on origin of the Rug"
   },
   {
-    question: "#5 How are Persian Rugs Named?",
+    question: "#5 How are Persian Rugs named?",
     choices: ["by the weaver", "by the Master", "city it was woven in", "by the Master Weaver"],
     answer: "city it was woven in"
   },
@@ -41,7 +41,7 @@ var indexQuestion = 0
 var setIntervalId;
 
 var counter = 30
-
+$("#scoreBoard").hide()
 
 //create function to display questions
 function displayQuestions() {

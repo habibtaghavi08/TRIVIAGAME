@@ -22,16 +22,16 @@ body {
 
 .col-sm-11 {
     background-image: url(../images/Dad&HabibRugRepairPic.jpg);
+    /* opacity:0.9;  */
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
-    /* color: rgb(1, 237, 241); */
-    color:AliceBlue ;
+    color: lavenderblush;
     font-family: 'Times New Roman', Times, serif;
     font-size: x-large;
     text-decoration-line: underline;
-    font-weight: 900;
+    font-weight: bolder;
     border: red;
     border-style: ridge;
     border-width: 10px;
